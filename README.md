@@ -39,6 +39,10 @@ less mim2gene.txt | grep -v "#" | awk -F"\t" '{if(($2 == "gene" || $2 == "gene/p
 
 ```bash
   docker logs -f omim
+
+```
+```bash
+docker run -it --rm   -v "$PWD":/home/ubuntu/omim-crawler   -e INPUT_FILE=data   namxle/omim-crawler:latest
 ```
 
 ## IV. Outputs
