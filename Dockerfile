@@ -24,17 +24,17 @@ RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
 ENV NVM_DIR=/home/ubuntu/nvm
 
-ENV NODE_VERSION=16.17.1
+ENV NODE_VERSION=24.2.0
 
 ENV NODE_ENV=dev
 
-RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash && \
+RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.40.3/install.sh | bash && \
     source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION && nvm alias default $NODE_VERSION \
     && nvm use $NODE_VERSION
 
-ENV NODE_PATH=/home/ubuntu/nvm/v16.17.1/lib/node_modules
+ENV NODE_PATH=/home/ubuntu/nvm/v24.2.0/lib/node_modules
 
-ENV PATH=/home/ubuntu/nvm/versions/node/v16.17.1/bin:$PATH
+ENV PATH=/home/ubuntu/nvm/versions/node/v24.2.0/bin:$PATH
 
 
 WORKDIR /home/ubuntu/omim-crawler
