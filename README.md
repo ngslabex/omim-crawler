@@ -16,7 +16,7 @@
   - The second column is the `omim number`
 
 ```bash
-less mim2gene.txt | grep -v "#" | awk -F"\t" '{if(($2 == "gene" || $2 == "gene/phenotype") && $4 != ""){print $4"\t"$1}}'  > data.txt
+less mim2gene.txt | grep -v "#" | awk -F"\t" '{if(($2 == "gene" || $2 == "gene/phenotype") && $4 != ""){print $4"\t"$1}}'  > batch-01.txt
 ```
 
 - Edit the `docker-compose.yml` file and set the `INPUT_FILE` value to your file name
@@ -42,7 +42,7 @@ less mim2gene.txt | grep -v "#" | awk -F"\t" '{if(($2 == "gene" || $2 == "gene/p
 
 ```
 ```bash
-docker run -it --rm   -v "$PWD":/home/ubuntu/omim-crawler   -e INPUT_FILE=data   namxle/omim-crawler:latest
+docker run -it --rm   -v "$PWD":/home/ubuntu/omim-crawler   -e INPUT_FILE=batch-01   namxle/omim-crawler:latest
 ```
 
 ## IV. Outputs
