@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t namxle/omim-crawler:latest . 
+docker build --no-cache -t namxle/omim-crawler:latest .
