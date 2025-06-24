@@ -1,5 +1,6 @@
-stem==1.6.0
-Scrapy==2.6.0
-bs4
-pyopenssl==22.1.0
-cryptography==38.0.4
+Scrapy==2.11.2
+Twisted==25.5.0
+pyOpenSSL==25.1.0
+cryptography==45.0.4
+beautifulsoup4==4.13.4
+stem==1.8.2
